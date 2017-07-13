@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     tweetId: { type: DataTypes.UUID, primaryKey: true, defaultValue: DataTypes.UUIDV1, allowNull: false },
     text: DataTypes.STRING,
     sentiment: DataTypes.STRING,
-    author: DataTypes.INTEGER,
+    author: DataTypes.STRING,
     published: DataTypes.DATE(6)
   }, {
     timestamps: true

@@ -6,8 +6,6 @@ module.exports = async function initGraphQL () {
   const schema = await validateSchema()
 
   return graphqlExpress((request, b) => {
-    const { setTransaction } = request
-
     return {
       schema: schema,
       context: { }

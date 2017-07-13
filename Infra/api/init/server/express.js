@@ -1,5 +1,4 @@
 const express = require('express')
-const lodashGet = require('lodash.get')
 
 const configureExpressMiddlewares = api => {
   const cors = require('cors')

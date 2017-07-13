@@ -1,4 +1,4 @@
-const { GraphQLString, GraphQLInt, GraphQLObjectType } = require('graphql')
+const { GraphQLString, GraphQLObjectType } = require('graphql')
 
 const Tweet = new GraphQLObjectType({
   name: 'Tweet',
@@ -17,7 +17,7 @@ const Tweet = new GraphQLObjectType({
       description: 'Author name'
     },
     published: {
-      type: GraphQLInt,
+      type: GraphQLString,
       description: 'Tweet published date'
     }
   }

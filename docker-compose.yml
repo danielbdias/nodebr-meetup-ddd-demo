@@ -1,18 +1,6 @@
 version: '2'
 
 services:
-  tweet-collector:
-    command: "bash -c 'yarn && yarn start'"
-    image: node:8
-    volumes:
-      - ./:/project
-    links:
-      - postgres
-    ports:
-      - 8000:8000
-    environment:
-      - DATABASE_HOST=postgres
-
   postgres:
     image: postgres:9.6
     environment:

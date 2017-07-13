@@ -7,11 +7,11 @@ const logOptions = {
 }
 
 const winstonMiddleware = (expressApp) => {
-  expressApp.use(expressWinston.logger({
-    transports: [ new winston.transports.Console(logOptions) ],
-    expressFormat: true,
-    colorize: true
-  }))
+  // expressApp.use(expressWinston.logger({
+  //   transports: [ new winston.transports.Console(logOptions) ],
+  //   expressFormat: true,
+  //   colorize: true
+  // }))
 
   expressApp.use(expressWinston.errorLogger({
     transports: [ new winston.transports.Console(logOptions) ],

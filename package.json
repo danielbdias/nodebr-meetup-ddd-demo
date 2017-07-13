@@ -12,9 +12,6 @@
     "start": "NODE_ENV=development NODE_PATH=./ nodemon Infra/api/server.js",
     "test": "NODE_ENV=test NODE_PATH=./ mocha \"Domain/**/*.test.js\" \"Infra/**/*.test.js\" --colors --require Tests/support.js --reporter spec",
     "test:watch": "yarn test -- --watch",
-    "integration": "NODE_PATH=./ cucumberjs Features",
-    "integration:coverage": "nyc --branches 0 --functions 95 --lines 95 --statements 95 --exclude \"(node_modules|Infra|Fixtures|Features)/**/*\" --exclude \"**/Exception/*.js\" --report-dir integration-coverage yarn integration",
-    "integration:watch": "watch -p \"+(Domain|Infra|seeders|Features)/**/*.js\" -c \"yarn integration\"",
     "coverage": "nyc yarn test",
     "coverage:watch": "watch -p \"+(Domain|Infra|seeders|Features)/**/*.js\" -c \"nyc yarn test\"",
     "lint": "standard -v \"Domain/**/*.js\" \"Infra/**/*.js\" \"seeders/*.js\" \"Features/**/*.js\"",
@@ -29,7 +26,7 @@
     "db:seed:all": "sequelize db:seed:all",
     "db:seed:undo": "sequelize db:seed:undo",
     "db:seed:undo:all": "sequelize db:seed:undo:all",
-    "build": "yarn lint && yarn coverage && yarn integration:coverage"
+    "build": "yarn lint && yarn coverage"
   },
   "engines": {
     "node": "8.1.2",
@@ -85,12 +82,12 @@
     "speck-sequelize-repository": "^0.0.9",
     "uuid": "^3.0.0",
     "winston": "^2.2.0",
-    "twitter-node-client": "^0.0.6"
+    "twitter-node-client": "^0.0.6",
+    "sentiment": "^4.0.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
-    "cucumber": "^1.3.1",
     "faker": "^3.1.0",
     "lodash": "^4.17.4",
     "mocha": "^3.1.1",

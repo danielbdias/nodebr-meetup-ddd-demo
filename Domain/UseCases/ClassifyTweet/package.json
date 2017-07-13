@@ -1,0 +1,6 @@
+{
+  "name": "ClassifyTweet",
+  "private": true,
+  "description": "Classify a tweet reaction into a positive, negative or neutral",
+  "main": "./ClassifyTweet.js"
+}
