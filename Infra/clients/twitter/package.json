@@ -1,0 +1,6 @@
+{
+  "name": "TwitterApiClient",
+  "private": true,
+  "description": "Client to access Twitter resources",
+  "main": "./twitter.js"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ProcessTweets",
+  "private": true,
+  "description": "Process tweets given a hashtag",
+  "main": "./ProcessTweets.js"
+}

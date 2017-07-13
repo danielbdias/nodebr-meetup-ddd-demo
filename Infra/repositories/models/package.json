@@ -1,0 +1,5 @@
+{
+  "name": "Model configuration",
+  "private": true,
+  "main": "./modelStore"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "GetTweets",
+  "private": true,
+  "description": "Get processed tweets",
+  "main": "./GetTweets.js"
+}

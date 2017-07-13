@@ -1,0 +1,5 @@
+{
+  "name": "GraphQL initializer",
+  "private": true,
+  "main": "./graphQL.js"
+}

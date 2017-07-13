@@ -1,0 +1,5 @@
+{
+  "name": "PaymentMethod",
+  "private": true,
+  "main": "./definitions.js"
+}
