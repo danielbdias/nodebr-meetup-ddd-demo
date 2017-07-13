@@ -1,18 +1,18 @@
 const dependencies = {
   TwitterClient: require('Infra/clients/twitter'),
   TweetRepository: require('Infra/repositories/TweetRepository'),
-  ClassifyTweet: require('Domain/UseCases/ClassifyTweet')
+  DiscoverTweetSentiment: require('Domain/UseCases/DiscoverTweetSentiment')
 }
 
 const Tweet = require('Domain/Entities/Tweet')
 
 const processSingleTweet = (rawTweet, injection) => {
-  const { TweetRepository, ClassifyTweet } = Object.assign({}, dependencies, injection)
+  const { TweetRepository, DiscoverTweetSentiment } = Object.assign({}, dependencies, injection)
 
   const tweet = new Tweet(rawTweet)
 
   // classify
-  tweet.sentiment = ClassifyTweet(tweet.text)
+  tweet.sentiment = DiscoverTweetSentiment(tweet.text, injection)
 
   // save in database
   return TweetRepository.save(tweet)
