@@ -1,4 +1,4 @@
-const { GraphQLString } = require('graphql')
+const { GraphQLList } = require('graphql')
 const TweetType = require('./types/tweet.type')
 
 const dependencies = {
@@ -6,7 +6,7 @@ const dependencies = {
 }
 
 module.exports = {
-  type: TweetType,
+  type: new GraphQLList(TweetType),
   args: { },
   resolve: (_, args, context, injection) => {
     const { GetTweets } = Object.assign({}, dependencies, injection)

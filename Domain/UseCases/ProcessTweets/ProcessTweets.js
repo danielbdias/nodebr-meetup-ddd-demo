@@ -3,7 +3,7 @@ const dependencies = {
 }
 
 module.exports = function ProcessTweets (hashtag, injection) {
-  const { TweetRepository } = Object.assign({}, dependencies, injection)
+  const { TwitterClient } = Object.assign({}, dependencies, injection)
 
-  return TweetRepository.findAllByCriterias({})
+  return TwitterClient.findAllByCriterias({})
 }

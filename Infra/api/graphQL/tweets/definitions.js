@@ -1,7 +1,7 @@
-const tweet = require('./tweet.query')
+const tweets = require('./tweets.query')
 const processTweets = require('./processTweets.mutation')
 
 module.exports = {
-  queries: { tweet },
+  queries: { tweets },
   mutations: { processTweets }
 }
