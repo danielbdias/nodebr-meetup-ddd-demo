@@ -75,4 +75,5 @@ query LookupTweets {
 
 Pressing the play button, you can exec one of the commands:
 
-- 
+- RetrieveTweetsFromTwitter: executes the described process
+- LookupTweets: see the saved tweets with a registered sentiment
