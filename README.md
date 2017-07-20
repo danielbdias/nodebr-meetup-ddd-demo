@@ -77,3 +77,9 @@ Pressing the play button, you can exec one of the commands:
 
 - RetrieveTweetsFromTwitter: executes the described process
 - LookupTweets: see the saved tweets with a registered sentiment
+
+### Remarks
+
+Just remember that this is a sample of a code with the DDD theory with some adaptations.
+
+Feel free to contact me in case of any questions at danielbpdias at gmail dot com.
